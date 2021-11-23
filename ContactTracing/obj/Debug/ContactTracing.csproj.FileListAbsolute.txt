@@ -1,0 +1,10 @@
+C:\Users\ASUNCION\source\repos\ContactTracing\ContactTracing\bin\Debug\ContactTracing.exe.config
+C:\Users\ASUNCION\source\repos\ContactTracing\ContactTracing\bin\Debug\ContactTracing.exe
+C:\Users\ASUNCION\source\repos\ContactTracing\ContactTracing\bin\Debug\ContactTracing.pdb
+C:\Users\ASUNCION\source\repos\ContactTracing\ContactTracing\obj\Debug\ContactTracing.csproj.AssemblyReference.cache
+C:\Users\ASUNCION\source\repos\ContactTracing\ContactTracing\obj\Debug\ContactTracing.Form1.resources
+C:\Users\ASUNCION\source\repos\ContactTracing\ContactTracing\obj\Debug\ContactTracing.Properties.Resources.resources
+C:\Users\ASUNCION\source\repos\ContactTracing\ContactTracing\obj\Debug\ContactTracing.csproj.GenerateResource.cache
+C:\Users\ASUNCION\source\repos\ContactTracing\ContactTracing\obj\Debug\ContactTracing.csproj.CoreCompileInputs.cache
+C:\Users\ASUNCION\source\repos\ContactTracing\ContactTracing\obj\Debug\ContactTracing.exe
+C:\Users\ASUNCION\source\repos\ContactTracing\ContactTracing\obj\Debug\ContactTracing.pdb
