@@ -29,6 +29,7 @@ namespace ContactTracing
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.textBoxFN = new System.Windows.Forms.TextBox();
             this.fullName = new System.Windows.Forms.Label();
             this.emailAdd = new System.Windows.Forms.Label();
@@ -46,11 +47,21 @@ namespace ContactTracing
             this.labelHeader = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.dateVisit = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.listBox1 = new System.Windows.Forms.ListBox();
+            this.question1 = new System.Windows.Forms.Label();
+            this.question2 = new System.Windows.Forms.Label();
+            this.question2Yes = new System.Windows.Forms.RadioButton();
+            this.question2No = new System.Windows.Forms.RadioButton();
+            this.question3 = new System.Windows.Forms.Label();
+            this.question4 = new System.Windows.Forms.Label();
+            this.question5 = new System.Windows.Forms.Label();
+            this.question3No = new System.Windows.Forms.RadioButton();
+            this.question3Yes = new System.Windows.Forms.RadioButton();
+            this.question4No = new System.Windows.Forms.RadioButton();
+            this.question4Yes = new System.Windows.Forms.RadioButton();
+            this.question5No = new System.Windows.Forms.RadioButton();
+            this.question5Yes = new System.Windows.Forms.RadioButton();
+            this.certiLabel = new System.Windows.Forms.Label();
+            this.certiCheckBox = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // textBoxFN
@@ -161,17 +172,17 @@ namespace ContactTracing
             "Runny Nose",
             "Diarhea",
             "Headache"});
-            this.healthCheckList.Location = new System.Drawing.Point(322, 268);
+            this.healthCheckList.Location = new System.Drawing.Point(322, 249);
             this.healthCheckList.Name = "healthCheckList";
             this.healthCheckList.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.healthCheckList.Size = new System.Drawing.Size(286, 198);
+            this.healthCheckList.Size = new System.Drawing.Size(286, 180);
             this.healthCheckList.TabIndex = 10;
             // 
             // noneCheckBox
             // 
             this.noneCheckBox.AutoSize = true;
             this.noneCheckBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.noneCheckBox.Location = new System.Drawing.Point(322, 472);
+            this.noneCheckBox.Location = new System.Drawing.Point(399, 435);
             this.noneCheckBox.Name = "noneCheckBox";
             this.noneCheckBox.Size = new System.Drawing.Size(145, 21);
             this.noneCheckBox.TabIndex = 11;
@@ -189,7 +200,7 @@ namespace ContactTracing
             // btnSubmit
             // 
             this.btnSubmit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSubmit.Location = new System.Drawing.Point(127, 590);
+            this.btnSubmit.Location = new System.Drawing.Point(551, 902);
             this.btnSubmit.Name = "btnSubmit";
             this.btnSubmit.Size = new System.Drawing.Size(85, 30);
             this.btnSubmit.TabIndex = 13;
@@ -200,7 +211,7 @@ namespace ContactTracing
             // 
             this.labelHeader.AutoSize = true;
             this.labelHeader.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelHeader.Location = new System.Drawing.Point(206, 9);
+            this.labelHeader.Location = new System.Drawing.Point(299, 9);
             this.labelHeader.Name = "labelHeader";
             this.labelHeader.Size = new System.Drawing.Size(107, 26);
             this.labelHeader.TabIndex = 14;
@@ -210,7 +221,7 @@ namespace ContactTracing
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(171, 35);
+            this.label1.Location = new System.Drawing.Point(259, 35);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(184, 22);
             this.label1.TabIndex = 15;
@@ -226,78 +237,201 @@ namespace ContactTracing
             this.dateVisit.TabIndex = 16;
             this.dateVisit.Text = "Date of Visit";
             // 
-            // label2
+            // question1
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(20, 268);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(256, 34);
-            this.label2.TabIndex = 17;
-            this.label2.Text = "Are you experiencing or did you have \r\nany of the following in the last 14 days?\r" +
-    "\n";
+            this.question1.AutoSize = true;
+            this.question1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.question1.Location = new System.Drawing.Point(20, 285);
+            this.question1.Name = "question1";
+            this.question1.Size = new System.Drawing.Size(268, 34);
+            this.question1.TabIndex = 17;
+            this.question1.Text = "1.) Are you experiencing or did you have \r\nany of the following in the last 14 da" +
+    "ys?\r\n";
             // 
-            // label3
+            // question2
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(20, 504);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(258, 68);
-            this.label3.TabIndex = 18;
-            this.label3.Text = "Have you had face-to-face contact \r\nwith a probable or confirmed COVID-19 \r\ncase " +
-    "within 1 meter and for more than \r\n15 minutes for the past 14 days?";
+            this.question2.AutoSize = true;
+            this.question2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.question2.Location = new System.Drawing.Point(20, 475);
+            this.question2.Name = "question2";
+            this.question2.Size = new System.Drawing.Size(258, 68);
+            this.question2.TabIndex = 18;
+            this.question2.Text = "2.) Have you had face-to-face contact \r\nwith a probable or confirmed COVID-19 \r\nc" +
+    "ase within 1 meter and for more than \r\n15 minutes for the past 14 days?";
             // 
-            // radioButton1
+            // question2Yes
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(325, 519);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(85, 17);
-            this.radioButton1.TabIndex = 19;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "radioButton1";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.question2Yes.AutoSize = true;
+            this.question2Yes.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.question2Yes.Location = new System.Drawing.Point(423, 492);
+            this.question2Yes.Name = "question2Yes";
+            this.question2Yes.Size = new System.Drawing.Size(50, 21);
+            this.question2Yes.TabIndex = 19;
+            this.question2Yes.TabStop = true;
+            this.question2Yes.Text = "Yes";
+            this.question2Yes.UseVisualStyleBackColor = true;
             // 
-            // radioButton2
+            // question2No
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(416, 519);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(85, 17);
-            this.radioButton2.TabIndex = 20;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "radioButton2";
-            this.radioButton2.UseVisualStyleBackColor = true;
+            this.question2No.AutoSize = true;
+            this.question2No.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.question2No.Location = new System.Drawing.Point(492, 492);
+            this.question2No.Name = "question2No";
+            this.question2No.Size = new System.Drawing.Size(44, 21);
+            this.question2No.TabIndex = 20;
+            this.question2No.TabStop = true;
+            this.question2No.Text = "No";
+            this.question2No.UseVisualStyleBackColor = true;
             // 
-            // listBox1
+            // question3
             // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.Items.AddRange(new object[] {
-            "1",
-            "2",
-            "3",
-            "4",
-            "5"});
-            this.listBox1.Location = new System.Drawing.Point(60, 371);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(120, 95);
-            this.listBox1.TabIndex = 21;
+            this.question3.AutoSize = true;
+            this.question3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.question3.Location = new System.Drawing.Point(20, 578);
+            this.question3.Name = "question3";
+            this.question3.Size = new System.Drawing.Size(268, 34);
+            this.question3.TabIndex = 21;
+            this.question3.Text = "3.) Are you experiencing or did you have \r\nany of the following in the last 14 da" +
+    "ys?\r\n";
+            // 
+            // question4
+            // 
+            this.question4.AutoSize = true;
+            this.question4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.question4.Location = new System.Drawing.Point(22, 653);
+            this.question4.Name = "question4";
+            this.question4.Size = new System.Drawing.Size(294, 34);
+            this.question4.TabIndex = 24;
+            this.question4.Text = "4.) Have you traveled outside the Philippines \r\nin the last 14 days?";
+            // 
+            // question5
+            // 
+            this.question5.AutoSize = true;
+            this.question5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.question5.Location = new System.Drawing.Point(22, 721);
+            this.question5.Name = "question5";
+            this.question5.Size = new System.Drawing.Size(296, 34);
+            this.question5.TabIndex = 27;
+            this.question5.Text = "5.) Have you traveled outside the current city/\r\nmunicipality where you reside? ";
+            // 
+            // question3No
+            // 
+            this.question3No.AutoSize = true;
+            this.question3No.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.question3No.Location = new System.Drawing.Point(493, 569);
+            this.question3No.Name = "question3No";
+            this.question3No.Size = new System.Drawing.Size(44, 21);
+            this.question3No.TabIndex = 29;
+            this.question3No.TabStop = true;
+            this.question3No.Text = "No";
+            this.question3No.UseVisualStyleBackColor = true;
+            // 
+            // question3Yes
+            // 
+            this.question3Yes.AutoSize = true;
+            this.question3Yes.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.question3Yes.Location = new System.Drawing.Point(422, 569);
+            this.question3Yes.Name = "question3Yes";
+            this.question3Yes.Size = new System.Drawing.Size(50, 21);
+            this.question3Yes.TabIndex = 28;
+            this.question3Yes.TabStop = true;
+            this.question3Yes.Text = "Yes";
+            this.question3Yes.UseVisualStyleBackColor = true;
+            // 
+            // question4No
+            // 
+            this.question4No.AutoSize = true;
+            this.question4No.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.question4No.Location = new System.Drawing.Point(494, 644);
+            this.question4No.Name = "question4No";
+            this.question4No.Size = new System.Drawing.Size(44, 21);
+            this.question4No.TabIndex = 31;
+            this.question4No.TabStop = true;
+            this.question4No.Text = "No";
+            this.question4No.UseVisualStyleBackColor = true;
+            // 
+            // question4Yes
+            // 
+            this.question4Yes.AutoSize = true;
+            this.question4Yes.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.question4Yes.Location = new System.Drawing.Point(423, 644);
+            this.question4Yes.Name = "question4Yes";
+            this.question4Yes.Size = new System.Drawing.Size(50, 21);
+            this.question4Yes.TabIndex = 30;
+            this.question4Yes.TabStop = true;
+            this.question4Yes.Text = "Yes";
+            this.question4Yes.UseVisualStyleBackColor = true;
+            // 
+            // question5No
+            // 
+            this.question5No.AutoSize = true;
+            this.question5No.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.question5No.Location = new System.Drawing.Point(494, 712);
+            this.question5No.Name = "question5No";
+            this.question5No.Size = new System.Drawing.Size(44, 21);
+            this.question5No.TabIndex = 33;
+            this.question5No.TabStop = true;
+            this.question5No.Text = "No";
+            this.question5No.UseVisualStyleBackColor = true;
+            // 
+            // question5Yes
+            // 
+            this.question5Yes.AutoSize = true;
+            this.question5Yes.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.question5Yes.Location = new System.Drawing.Point(423, 712);
+            this.question5Yes.Name = "question5Yes";
+            this.question5Yes.Size = new System.Drawing.Size(50, 21);
+            this.question5Yes.TabIndex = 32;
+            this.question5Yes.TabStop = true;
+            this.question5Yes.Text = "Yes";
+            this.question5Yes.UseVisualStyleBackColor = true;
+            // 
+            // certiLabel
+            // 
+            this.certiLabel.AutoSize = true;
+            this.certiLabel.Location = new System.Drawing.Point(12, 786);
+            this.certiLabel.Name = "certiLabel";
+            this.certiLabel.Size = new System.Drawing.Size(451, 65);
+            this.certiLabel.TabIndex = 34;
+            this.certiLabel.Text = resources.GetString("certiLabel.Text");
+            this.certiLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // certiCheckBox
+            // 
+            this.certiCheckBox.AutoSize = true;
+            this.certiCheckBox.Location = new System.Drawing.Point(479, 804);
+            this.certiCheckBox.Name = "certiCheckBox";
+            this.certiCheckBox.Size = new System.Drawing.Size(164, 30);
+            this.certiCheckBox.TabIndex = 35;
+            this.certiCheckBox.Text = "I agree upon the given terms \r\nand condition\r\n";
+            this.certiCheckBox.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
+            this.AllowDrop = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
+            this.AutoScrollMargin = new System.Drawing.Size(0, 50);
             this.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange;
             this.BackColor = System.Drawing.Color.MediumAquamarine;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.ClientSize = new System.Drawing.Size(670, 621);
-            this.Controls.Add(this.listBox1);
-            this.Controls.Add(this.radioButton2);
-            this.Controls.Add(this.radioButton1);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
+            this.ClientSize = new System.Drawing.Size(665, 505);
+            this.Controls.Add(this.certiCheckBox);
+            this.Controls.Add(this.certiLabel);
+            this.Controls.Add(this.question5No);
+            this.Controls.Add(this.question5Yes);
+            this.Controls.Add(this.question4No);
+            this.Controls.Add(this.question4Yes);
+            this.Controls.Add(this.question3No);
+            this.Controls.Add(this.question3Yes);
+            this.Controls.Add(this.question5);
+            this.Controls.Add(this.question4);
+            this.Controls.Add(this.question3);
+            this.Controls.Add(this.question2No);
+            this.Controls.Add(this.question2Yes);
+            this.Controls.Add(this.question2);
+            this.Controls.Add(this.question1);
             this.Controls.Add(this.dateVisit);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.labelHeader);
@@ -318,6 +452,7 @@ namespace ContactTracing
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.Name = "Form1";
+            this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             this.ResumeLayout(false);
@@ -344,11 +479,21 @@ namespace ContactTracing
         private System.Windows.Forms.Label labelHeader;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label dateVisit;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.RadioButton radioButton1;
-        private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.Label question1;
+        private System.Windows.Forms.Label question2;
+        private System.Windows.Forms.RadioButton question2Yes;
+        private System.Windows.Forms.RadioButton question2No;
+        private System.Windows.Forms.Label question3;
+        private System.Windows.Forms.Label question4;
+        private System.Windows.Forms.Label question5;
+        private System.Windows.Forms.RadioButton question3No;
+        private System.Windows.Forms.RadioButton question3Yes;
+        private System.Windows.Forms.RadioButton question4No;
+        private System.Windows.Forms.RadioButton question4Yes;
+        private System.Windows.Forms.RadioButton question5No;
+        private System.Windows.Forms.RadioButton question5Yes;
+        private System.Windows.Forms.Label certiLabel;
+        private System.Windows.Forms.CheckBox certiCheckBox;
     }
 }
 

@@ -117,4 +117,11 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="certiLabel.Text" xml:space="preserve">
+    <value>I hereby certify that the information given is true, correct and complete. I understand 
+that failure to answer any question or any falsified response may have serious consequences. 
+I understand that my personal information is protected by RA 10173 or the Data Privacy Act of 
+2012 and that this form will be destroyed after 20 days from the date of accomplishment, 
+following the National Archives of the Philippines protocol.</value>
+  </data>
 </root>
