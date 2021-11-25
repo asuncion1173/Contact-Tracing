@@ -39,10 +39,8 @@ namespace ContactTracing
             this.contactNumber = new System.Windows.Forms.Label();
             this.textBoxContact = new System.Windows.Forms.TextBox();
             this.gender = new System.Windows.Forms.Label();
-            this.textBoxGender = new System.Windows.Forms.TextBox();
             this.healthCheckList = new System.Windows.Forms.CheckedListBox();
-            this.noneCheckBox = new System.Windows.Forms.CheckBox();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.dateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.btnSubmit = new System.Windows.Forms.Button();
             this.labelHeader = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -62,6 +60,19 @@ namespace ContactTracing
             this.question5Yes = new System.Windows.Forms.RadioButton();
             this.certiLabel = new System.Windows.Forms.Label();
             this.certiCheckBox = new System.Windows.Forms.CheckBox();
+            this.buttonGender = new System.Windows.Forms.Button();
+            this.groupGenderBox = new System.Windows.Forms.GroupBox();
+            this.radioButtonFemale = new System.Windows.Forms.RadioButton();
+            this.radioButtonMale = new System.Windows.Forms.RadioButton();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.groupGenderBox.SuspendLayout();
+            this.panel1.SuspendLayout();
+            this.panel2.SuspendLayout();
+            this.panel3.SuspendLayout();
+            this.panel4.SuspendLayout();
             this.SuspendLayout();
             // 
             // textBoxFN
@@ -98,7 +109,7 @@ namespace ContactTracing
             this.textBoxEmail.Location = new System.Drawing.Point(322, 190);
             this.textBoxEmail.Name = "textBoxEmail";
             this.textBoxEmail.Size = new System.Drawing.Size(287, 23);
-            this.textBoxEmail.TabIndex = 2;
+            this.textBoxEmail.TabIndex = 5;
             // 
             // residence
             // 
@@ -116,7 +127,7 @@ namespace ContactTracing
             this.textBoxResidence.Location = new System.Drawing.Point(12, 136);
             this.textBoxResidence.Name = "textBoxResidence";
             this.textBoxResidence.Size = new System.Drawing.Size(264, 23);
-            this.textBoxResidence.TabIndex = 4;
+            this.textBoxResidence.TabIndex = 1;
             // 
             // contactNumber
             // 
@@ -134,7 +145,7 @@ namespace ContactTracing
             this.textBoxContact.Location = new System.Drawing.Point(12, 190);
             this.textBoxContact.Name = "textBoxContact";
             this.textBoxContact.Size = new System.Drawing.Size(237, 23);
-            this.textBoxContact.TabIndex = 6;
+            this.textBoxContact.TabIndex = 4;
             // 
             // gender
             // 
@@ -146,14 +157,6 @@ namespace ContactTracing
             this.gender.TabIndex = 9;
             this.gender.Text = "Gender:";
             // 
-            // textBoxGender
-            // 
-            this.textBoxGender.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxGender.Location = new System.Drawing.Point(322, 136);
-            this.textBoxGender.Name = "textBoxGender";
-            this.textBoxGender.Size = new System.Drawing.Size(121, 23);
-            this.textBoxGender.TabIndex = 8;
-            // 
             // healthCheckList
             // 
             this.healthCheckList.BackColor = System.Drawing.SystemColors.MenuBar;
@@ -161,51 +164,32 @@ namespace ContactTracing
             this.healthCheckList.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.healthCheckList.FormattingEnabled = true;
             this.healthCheckList.HorizontalScrollbar = true;
-            this.healthCheckList.Items.AddRange(new object[] {
-            "Fever",
-            "Dry Cough",
-            "Sore Throat",
-            "Shortness of Breath",
-            "Loss of Smell and Taste",
-            "Fatigue",
-            "Body Pain",
-            "Runny Nose",
-            "Diarhea",
-            "Headache"});
             this.healthCheckList.Location = new System.Drawing.Point(322, 249);
             this.healthCheckList.Name = "healthCheckList";
             this.healthCheckList.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.healthCheckList.Size = new System.Drawing.Size(286, 180);
-            this.healthCheckList.TabIndex = 10;
+            this.healthCheckList.TabIndex = 6;
+            this.healthCheckList.Click += new System.EventHandler(this.healthCheckList_Click);
             // 
-            // noneCheckBox
+            // dateTimePicker
             // 
-            this.noneCheckBox.AutoSize = true;
-            this.noneCheckBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.noneCheckBox.Location = new System.Drawing.Point(399, 435);
-            this.noneCheckBox.Name = "noneCheckBox";
-            this.noneCheckBox.Size = new System.Drawing.Size(145, 21);
-            this.noneCheckBox.TabIndex = 11;
-            this.noneCheckBox.Text = "None of the Above";
-            this.noneCheckBox.UseVisualStyleBackColor = true;
-            // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker1.Location = new System.Drawing.Point(322, 87);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(299, 20);
-            this.dateTimePicker1.TabIndex = 12;
+            this.dateTimePicker.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateTimePicker.Location = new System.Drawing.Point(322, 87);
+            this.dateTimePicker.Name = "dateTimePicker";
+            this.dateTimePicker.Size = new System.Drawing.Size(299, 20);
+            this.dateTimePicker.TabIndex = 12;
             // 
             // btnSubmit
             // 
+            this.btnSubmit.Enabled = false;
             this.btnSubmit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSubmit.Location = new System.Drawing.Point(551, 902);
             this.btnSubmit.Name = "btnSubmit";
             this.btnSubmit.Size = new System.Drawing.Size(85, 30);
-            this.btnSubmit.TabIndex = 13;
+            this.btnSubmit.TabIndex = 12;
             this.btnSubmit.Text = "Submit";
             this.btnSubmit.UseVisualStyleBackColor = true;
+            this.btnSubmit.Click += new System.EventHandler(this.btnSubmit_Click);
             // 
             // labelHeader
             // 
@@ -243,10 +227,10 @@ namespace ContactTracing
             this.question1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.question1.Location = new System.Drawing.Point(20, 285);
             this.question1.Name = "question1";
-            this.question1.Size = new System.Drawing.Size(268, 34);
+            this.question1.Size = new System.Drawing.Size(268, 68);
             this.question1.TabIndex = 17;
             this.question1.Text = "1.) Are you experiencing or did you have \r\nany of the following in the last 14 da" +
-    "ys?\r\n";
+    "ys?\r\n\r\nIf none, leave checklist empty";
             // 
             // question2
             // 
@@ -263,19 +247,19 @@ namespace ContactTracing
             // 
             this.question2Yes.AutoSize = true;
             this.question2Yes.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.question2Yes.Location = new System.Drawing.Point(423, 492);
+            this.question2Yes.Location = new System.Drawing.Point(9, 15);
             this.question2Yes.Name = "question2Yes";
             this.question2Yes.Size = new System.Drawing.Size(50, 21);
             this.question2Yes.TabIndex = 19;
-            this.question2Yes.TabStop = true;
             this.question2Yes.Text = "Yes";
             this.question2Yes.UseVisualStyleBackColor = true;
             // 
             // question2No
             // 
             this.question2No.AutoSize = true;
+            this.question2No.Checked = true;
             this.question2No.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.question2No.Location = new System.Drawing.Point(492, 492);
+            this.question2No.Location = new System.Drawing.Point(81, 15);
             this.question2No.Name = "question2No";
             this.question2No.Size = new System.Drawing.Size(44, 21);
             this.question2No.TabIndex = 20;
@@ -317,8 +301,9 @@ namespace ContactTracing
             // question3No
             // 
             this.question3No.AutoSize = true;
+            this.question3No.Checked = true;
             this.question3No.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.question3No.Location = new System.Drawing.Point(493, 569);
+            this.question3No.Location = new System.Drawing.Point(80, 16);
             this.question3No.Name = "question3No";
             this.question3No.Size = new System.Drawing.Size(44, 21);
             this.question3No.TabIndex = 29;
@@ -330,19 +315,19 @@ namespace ContactTracing
             // 
             this.question3Yes.AutoSize = true;
             this.question3Yes.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.question3Yes.Location = new System.Drawing.Point(422, 569);
+            this.question3Yes.Location = new System.Drawing.Point(9, 16);
             this.question3Yes.Name = "question3Yes";
             this.question3Yes.Size = new System.Drawing.Size(50, 21);
             this.question3Yes.TabIndex = 28;
-            this.question3Yes.TabStop = true;
             this.question3Yes.Text = "Yes";
             this.question3Yes.UseVisualStyleBackColor = true;
             // 
             // question4No
             // 
             this.question4No.AutoSize = true;
+            this.question4No.Checked = true;
             this.question4No.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.question4No.Location = new System.Drawing.Point(494, 644);
+            this.question4No.Location = new System.Drawing.Point(80, 16);
             this.question4No.Name = "question4No";
             this.question4No.Size = new System.Drawing.Size(44, 21);
             this.question4No.TabIndex = 31;
@@ -354,19 +339,19 @@ namespace ContactTracing
             // 
             this.question4Yes.AutoSize = true;
             this.question4Yes.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.question4Yes.Location = new System.Drawing.Point(423, 644);
+            this.question4Yes.Location = new System.Drawing.Point(10, 16);
             this.question4Yes.Name = "question4Yes";
             this.question4Yes.Size = new System.Drawing.Size(50, 21);
             this.question4Yes.TabIndex = 30;
-            this.question4Yes.TabStop = true;
             this.question4Yes.Text = "Yes";
             this.question4Yes.UseVisualStyleBackColor = true;
             // 
             // question5No
             // 
             this.question5No.AutoSize = true;
+            this.question5No.Checked = true;
             this.question5No.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.question5No.Location = new System.Drawing.Point(494, 712);
+            this.question5No.Location = new System.Drawing.Point(79, 16);
             this.question5No.Name = "question5No";
             this.question5No.Size = new System.Drawing.Size(44, 21);
             this.question5No.TabIndex = 33;
@@ -378,11 +363,10 @@ namespace ContactTracing
             // 
             this.question5Yes.AutoSize = true;
             this.question5Yes.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.question5Yes.Location = new System.Drawing.Point(423, 712);
+            this.question5Yes.Location = new System.Drawing.Point(10, 16);
             this.question5Yes.Name = "question5Yes";
             this.question5Yes.Size = new System.Drawing.Size(50, 21);
             this.question5Yes.TabIndex = 32;
-            this.question5Yes.TabStop = true;
             this.question5Yes.Text = "Yes";
             this.question5Yes.UseVisualStyleBackColor = true;
             // 
@@ -399,12 +383,93 @@ namespace ContactTracing
             // certiCheckBox
             // 
             this.certiCheckBox.AutoSize = true;
-            this.certiCheckBox.Location = new System.Drawing.Point(479, 804);
+            this.certiCheckBox.Location = new System.Drawing.Point(472, 804);
             this.certiCheckBox.Name = "certiCheckBox";
             this.certiCheckBox.Size = new System.Drawing.Size(164, 30);
-            this.certiCheckBox.TabIndex = 35;
+            this.certiCheckBox.TabIndex = 11;
             this.certiCheckBox.Text = "I agree upon the given terms \r\nand condition\r\n";
             this.certiCheckBox.UseVisualStyleBackColor = true;
+            this.certiCheckBox.CheckedChanged += new System.EventHandler(this.certiCheckBox_CheckedChanged);
+            // 
+            // buttonGender
+            // 
+            this.buttonGender.Location = new System.Drawing.Point(325, 135);
+            this.buttonGender.Name = "buttonGender";
+            this.buttonGender.Size = new System.Drawing.Size(75, 23);
+            this.buttonGender.TabIndex = 3;
+            this.buttonGender.Text = "Male";
+            this.buttonGender.UseVisualStyleBackColor = true;
+            this.buttonGender.Click += new System.EventHandler(this.buttonGender_Click);
+            // 
+            // groupGenderBox
+            // 
+            this.groupGenderBox.Controls.Add(this.radioButtonFemale);
+            this.groupGenderBox.Controls.Add(this.radioButtonMale);
+            this.groupGenderBox.Location = new System.Drawing.Point(406, 119);
+            this.groupGenderBox.Name = "groupGenderBox";
+            this.groupGenderBox.Size = new System.Drawing.Size(99, 49);
+            this.groupGenderBox.TabIndex = 37;
+            this.groupGenderBox.TabStop = false;
+            this.groupGenderBox.Visible = false;
+            // 
+            // radioButtonFemale
+            // 
+            this.radioButtonFemale.AutoSize = true;
+            this.radioButtonFemale.Location = new System.Drawing.Point(0, 30);
+            this.radioButtonFemale.Name = "radioButtonFemale";
+            this.radioButtonFemale.Size = new System.Drawing.Size(59, 17);
+            this.radioButtonFemale.TabIndex = 39;
+            this.radioButtonFemale.Text = "Female";
+            this.radioButtonFemale.UseVisualStyleBackColor = true;
+            // 
+            // radioButtonMale
+            // 
+            this.radioButtonMale.AutoSize = true;
+            this.radioButtonMale.Checked = true;
+            this.radioButtonMale.Location = new System.Drawing.Point(0, 7);
+            this.radioButtonMale.Name = "radioButtonMale";
+            this.radioButtonMale.Size = new System.Drawing.Size(48, 17);
+            this.radioButtonMale.TabIndex = 38;
+            this.radioButtonMale.TabStop = true;
+            this.radioButtonMale.Text = "Male";
+            this.radioButtonMale.UseVisualStyleBackColor = true;
+            this.radioButtonMale.CheckedChanged += new System.EventHandler(this.radioButtonMale_CheckedChanged);
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.question2Yes);
+            this.panel1.Controls.Add(this.question2No);
+            this.panel1.Location = new System.Drawing.Point(417, 487);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(133, 52);
+            this.panel1.TabIndex = 7;
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.question3Yes);
+            this.panel2.Controls.Add(this.question3No);
+            this.panel2.Location = new System.Drawing.Point(417, 560);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(133, 52);
+            this.panel2.TabIndex = 8;
+            // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.question4Yes);
+            this.panel3.Controls.Add(this.question4No);
+            this.panel3.Location = new System.Drawing.Point(417, 635);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(133, 52);
+            this.panel3.TabIndex = 9;
+            // 
+            // panel4
+            // 
+            this.panel4.Controls.Add(this.question5Yes);
+            this.panel4.Controls.Add(this.question5No);
+            this.panel4.Location = new System.Drawing.Point(417, 703);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(133, 52);
+            this.panel4.TabIndex = 10;
             // 
             // Form1
             // 
@@ -417,30 +482,26 @@ namespace ContactTracing
             this.BackColor = System.Drawing.Color.MediumAquamarine;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.ClientSize = new System.Drawing.Size(665, 505);
+            this.Controls.Add(this.panel3);
+            this.Controls.Add(this.panel4);
+            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.groupGenderBox);
+            this.Controls.Add(this.buttonGender);
             this.Controls.Add(this.certiCheckBox);
             this.Controls.Add(this.certiLabel);
-            this.Controls.Add(this.question5No);
-            this.Controls.Add(this.question5Yes);
-            this.Controls.Add(this.question4No);
-            this.Controls.Add(this.question4Yes);
-            this.Controls.Add(this.question3No);
-            this.Controls.Add(this.question3Yes);
             this.Controls.Add(this.question5);
             this.Controls.Add(this.question4);
             this.Controls.Add(this.question3);
-            this.Controls.Add(this.question2No);
-            this.Controls.Add(this.question2Yes);
             this.Controls.Add(this.question2);
             this.Controls.Add(this.question1);
             this.Controls.Add(this.dateVisit);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.labelHeader);
             this.Controls.Add(this.btnSubmit);
-            this.Controls.Add(this.dateTimePicker1);
-            this.Controls.Add(this.noneCheckBox);
+            this.Controls.Add(this.dateTimePicker);
             this.Controls.Add(this.healthCheckList);
             this.Controls.Add(this.gender);
-            this.Controls.Add(this.textBoxGender);
             this.Controls.Add(this.contactNumber);
             this.Controls.Add(this.textBoxContact);
             this.Controls.Add(this.residence);
@@ -455,6 +516,16 @@ namespace ContactTracing
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
+            this.groupGenderBox.ResumeLayout(false);
+            this.groupGenderBox.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
+            this.panel4.ResumeLayout(false);
+            this.panel4.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -471,10 +542,8 @@ namespace ContactTracing
         private System.Windows.Forms.Label contactNumber;
         private System.Windows.Forms.TextBox textBoxContact;
         private System.Windows.Forms.Label gender;
-        private System.Windows.Forms.TextBox textBoxGender;
         private System.Windows.Forms.CheckedListBox healthCheckList;
-        private System.Windows.Forms.CheckBox noneCheckBox;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker dateTimePicker;
         private System.Windows.Forms.Button btnSubmit;
         private System.Windows.Forms.Label labelHeader;
         private System.Windows.Forms.Label label1;
@@ -494,6 +563,14 @@ namespace ContactTracing
         private System.Windows.Forms.RadioButton question5Yes;
         private System.Windows.Forms.Label certiLabel;
         private System.Windows.Forms.CheckBox certiCheckBox;
+        private System.Windows.Forms.Button buttonGender;
+        private System.Windows.Forms.GroupBox groupGenderBox;
+        private System.Windows.Forms.RadioButton radioButtonFemale;
+        private System.Windows.Forms.RadioButton radioButtonMale;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Panel panel4;
     }
 }
 
