@@ -49,7 +49,7 @@ namespace ContactTracing
         private void btnSubmit_Click(object sender, EventArgs e)
         {
             StreamWriter output;
-            output = File.AppendText(@"C:\Users\ASUNCION\Desktop\Safe Stay\information.txt");
+            output = File.CreateText(@"C:\Users\ASUNCION\Desktop\Safe Stay\" + textBoxFN.Text + ".txt");
             output.WriteLine("----------------------------------------------------------------------------------");
             output.WriteLine("Full Name: " + textBoxFN.Text);
             output.WriteLine("Date: " + dateTimePicker.Value);
