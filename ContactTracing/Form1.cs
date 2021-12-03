@@ -50,7 +50,6 @@ namespace ContactTracing
         {
             StreamWriter output;
             output = File.CreateText(@"C:\Users\ASUNCION\Desktop\Safe Stay\" + textBoxFN.Text + ".txt");
-            output.WriteLine("----------------------------------------------------------------------------------");
             output.WriteLine("Full Name: " + textBoxFN.Text);
             output.WriteLine("Date: " + dateTimePicker.Value);
             output.WriteLine("Residence: " + textBoxResidence.Text);
@@ -66,49 +65,49 @@ namespace ContactTracing
             }
             output.WriteLine("Contact Number: " + textBoxContact.Text);
             output.WriteLine("Email: " + textBoxEmail.Text);
-            output.WriteLine("Number 1 answers: ");
+            output.WriteLine("1.) Has experienced any symptoms: ");
             foreach (Object item in healthCheckList.CheckedItems)
             {     
                 output.WriteLine(item.ToString());
             }
-            output.WriteLine("Number 2 answer: ");
+            output.WriteLine("2.) Had f2f contact with person positive with Covid-19 for the past 14 days: ");
             if (question2No.Checked)
             {
-                output.WriteLine("No");
+                output.WriteLine(" -No");
             }
             else
             {
-                output.WriteLine("Yes");
+                output.WriteLine(" -Yes");
             }
-            output.WriteLine("Number 3 answer: ");
+            output.WriteLine("3. )Took care of a person probable or positive with Covid-19 for the past 14 days: ");
             if (question3No.Checked)
             {
-                output.WriteLine("No");
+                output.WriteLine(" -No");
             }
             else
             {
-                output.WriteLine("Yes");
+                output.WriteLine(" -Yes");
             }
-            output.WriteLine("Number 4 answers: ");
+            output.WriteLine("4.) Traveled outside the Philippines for the past 14 days: ");
             if (question4No.Checked)
             {
-                output.WriteLine("No");
+                output.WriteLine(" -No");
             }
             else
             {
-                output.WriteLine("Yes");
+                output.WriteLine(" -Yes");
             }
-            output.WriteLine("Number 5 answers: ");
+            output.WriteLine("5.) Have travel outside the current city: ");
             if (question5No.Checked)
             {
-                output.WriteLine("No");
+                output.WriteLine(" -No");
             }
             else
             {
-                output.WriteLine("Yes");
+                output.WriteLine(" -Yes");
             }
             output.Close();
-            MessageBox.Show("Data added");
+            MessageBox.Show("Data added. Thank you for your input.");
             Form1 form1 = new Form1();
             this.Hide();
             form1.Show();

@@ -271,11 +271,12 @@ namespace ContactTracing
             // 
             this.question3.AutoSize = true;
             this.question3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.question3.Location = new System.Drawing.Point(20, 578);
+            this.question3.Location = new System.Drawing.Point(20, 560);
             this.question3.Name = "question3";
-            this.question3.Size = new System.Drawing.Size(268, 34);
+            this.question3.Size = new System.Drawing.Size(299, 68);
             this.question3.TabIndex = 21;
-            this.question3.Text = "3.) Are you experiencing or did you have \r\nany of the following in the last 14 da" +
+            this.question3.Text = "3.) Have you provided direct care for a patient\r\nwith probable or confirmed COVID" +
+    "-19 case\r\nwithout using proper personal protective\r\nequipment for the past 14 da" +
     "ys?\r\n";
             // 
             // question4
@@ -513,9 +514,10 @@ namespace ContactTracing
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.Name = "Form1";
+            this.ShowIcon = false;
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Form1";
+            this.Text = "Safe Stay Contact Tracing Form";
             this.groupGenderBox.ResumeLayout(false);
             this.groupGenderBox.PerformLayout();
             this.panel1.ResumeLayout(false);
